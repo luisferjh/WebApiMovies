@@ -1,0 +1,25 @@
+<h3>On Theathers</h3>
+<div class="row mb-4">
+    <div class="col">
+        <app-search></app-search>
+    </div>
+    
+</div>
+
+<div class="row justify-content-end">
+    <ng-container *ngFor="let item of moviesOnTheater" >
+        <app-grid [dataMovies]="item"
+                class="col-md-4"
+                (click)="showDetail(item.id)"
+        >
+    
+        </app-grid>
+    </ng-container>
+</div>
+<!-- <app-grid 
+    [dataMovies]="moviesOnTheater"
+    (click)="redirectToDetail( $event)"   
+>
+</app-grid> -->
+
+

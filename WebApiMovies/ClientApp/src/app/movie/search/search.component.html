@@ -1,0 +1,24 @@
+<input 
+    type="text" 
+    class="form-control" 
+    placeholder="Search Movies...."  
+    (keyup.enter)="search()"
+    #txtSearch
+/> 
+
+<div *ngIf="noData" 
+     class="alert alert-danger">
+    not information about the movie {{ valueSearched }}
+</div>
+
+
+<div *ngIf="moviesSearched.length > 0" class="row justify-content-end">
+    <ng-container *ngFor="let item of moviesSearched" >
+        <app-grid [dataMovies]="item"
+                class="col-md-4"
+                (click)="showDetail(item.id)"
+        >
+
+        </app-grid>
+    </ng-container>
+</div>

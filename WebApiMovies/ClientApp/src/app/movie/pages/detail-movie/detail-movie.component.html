@@ -1,0 +1,9 @@
+<div class="row">
+    <h2>{{ detailMovie.title}}</h2>
+    <div class="card p-0" style="width: 25rem;">
+        <img [src]="detailMovie.posterPath" class="card-img-top" [alt]="detailMovie.title">
+        <div class="card-body">
+          <h5 class="card-title">synopsis</h5>
+          <p class="card-text">{{ detailMovie.overview}}</p>
+        </div>       
+</div>

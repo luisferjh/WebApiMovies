@@ -1,0 +1,23 @@
+<!-- <div class="row ml-1">
+    <div *ngFor="let item of dataMovies" 
+        class="card m-2 p-0" 
+        style="width: 10rem;"
+    >
+        <img [src]="item.posterPath" class="card-img-top" [alt]="item.title">
+        <div class="card-body title-color">
+          <p class="card-text text-white">{{item.title }}</p>
+        </div>
+      </div>
+</div>  -->
+
+<div class="ml-1">
+  <div  
+      class="card m-2 p-0" 
+      style="width: 10rem;"
+  >
+      <img [src]="dataMovies.posterPath" class="card-img-top" [alt]="dataMovies.title">
+      <div class="card-body title-color">
+        <p class="card-text text-white">{{dataMovies.title }}</p>
+      </div>
+    </div>
+</div> 
